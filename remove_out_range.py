@@ -20,8 +20,8 @@ for i in open(boxfile):
     ori_box+=1
     line=infile.readline()
     xy = line.split('\t')
-    if int(xy[1])< (3838-256) and int(xy[1])>0 and int(xy[0]) > 0 and int(xy[0]) < (3710-256):
+    if int(xy[1])<= (3838-256) and int(xy[1])>0 and int(xy[0]) > 0 and int(xy[0]) <= (3710-256):
         outfile.write("%s\t%s\t256\t256\n" % (xy[0],xy[1]))
         out_box+=1
 
-print "%r/%r boxs selected from %s out put to ./inrange_box" % (out_box,ori_box,boxfile)
+print "%r/%r\tboxs selected from %s out put to ./inrange_box" % (out_box,ori_box,boxfile)
