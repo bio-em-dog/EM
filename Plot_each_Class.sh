@@ -17,6 +17,11 @@ do
   echo "" >> list_$DATE
 done
 
+for i in `tail -n 1 list_$DATE`
+do
+  echo $i
+done > ClassNumber025
+
 #生成gnuplot的命令
 echo -e "set term pdf\nset output \"aaaa_$DATE.pdf\"\nunset key" > gnuplot_script_$DATE
 echo -n "plot \"list_$DATE\" using 1 with lp ls 7" >> gnuplot_script_$DATE
