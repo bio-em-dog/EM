@@ -32,9 +32,9 @@ large3Pos=`grep -n $large3 ClassNumber025 | cut -d ':' -f 1`
 
 #生成gnuplot的命令
 echo -e "set term pdf\nset output \"aaaa_$DATE.pdf\"\nunset key" > gnuplot_script_$DATE
-echo "set label 1 \"$large1\" at $Number_of_iteration,$large1" >> gnuplot_script_$DATE
-echo "set label 2 \"$large2\" at $Number_of_iteration,$large1" >> gnuplot_script_$DATE
-echo "set label 3 \"$large3\" at $Number_of_iteration,$large1" >> gnuplot_script_$DATE
+echo "set label 1 \"$large1\" at $Number_of_iteration,$large1 center" >> gnuplot_script_$DATE
+echo "set label 2 \"$large2\" at $Number_of_iteration,$large2 center" >> gnuplot_script_$DATE
+echo "set label 3 \"$large3\" at $Number_of_iteration,$large3 center" >> gnuplot_script_$DATE
 echo -n "plot \"list_$DATE\" using 1 with lp ls 7" >> gnuplot_script_$DATE
 for ((i=2;i<=$Number_of_Classes;i++))
 do
