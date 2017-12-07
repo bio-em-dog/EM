@@ -38,11 +38,11 @@ echo "set label 3 \"$large3\" at $Number_of_iteration,$large3 center" >> gnuplot
 echo -n "plot \"list_$DATE\" using 1 with lp ls 7" >> gnuplot_script_$DATE
 for ((i=2;i<=$Number_of_Classes;i++))
 do
-  if [ $i = large1Pos ];then
+  if [ $i -eq large1Pos ];then
     echo -n ", \"list_$DATE\" u $i w lp ls 3" >> gnuplot_script_$DATE
-  elif [ $i = large2Pos ];then
+  elif [ $i -eq large2Pos ];then
     echo -n ", \"list_$DATE\" u $i w lp ls 4" >> gnuplot_script_$DATE
-  elif [ $i = large3Pos ];then
+  elif [ $i -eq large3Pos ];then
     echo -n ", \"list_$DATE\" u $i w lp ls 5" >> gnuplot_script_$DATE
   else
     echo -n ", \"list_$DATE\" u $i w lp ls 7" >> gnuplot_script_$DATE
