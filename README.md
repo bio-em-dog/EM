@@ -16,3 +16,9 @@
 
 
 ### select_micrographs.py
+
+
+### autolog.sh
+加入常见信息grep
+
+### autorelion.sh
