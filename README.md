@@ -3,17 +3,21 @@
 ### Plot_each_class.sh
 画每个分类，每个
 
-### awk_ClassNumber
-
 
 ### autolog.sh
-12.11 
-- todo 加入常见信息grep
-12.12
-- done 可以生成很详细的了
+- [x] 加入常见信息grep
+
 
 ### autorelion.sh
 
+
+
+### awk_ClassNumber
+
+
+
+### class_exchange.sh
+- [ ] 加入自动画图
 
 
 ### refine helical
