@@ -5,16 +5,22 @@ DATE=$(date +%Y%m%d%H%M%S)
 Number_of_iteration=25
 Number_of_Classes=100
 #注意cut的位置！！！
+#cut位置由grep和awk共同定位，不用手动了
 #------------------------------------------------------
+column=`cat run_it000_data.star | grep  _rlnClassNumber | cut -d '#' -f 2`
 
 for j in {01..25}
 do
+  filename=`ls *it0${j}_data.star | tail -n 1`
+  awk -v a=$column {'print $a'} < $filename > tmp$DATE
   for ((i=1;i<=$Number_of_Classes;i++))
   do
-    ClassNumber=`cat run*_it0${j}_data.star | cut -b 230-265 | grep "  $i  " | wc -l`
+    ClassNumber=`grep -r $i tmp$DATE`
     echo -n "$ClassNumber " >> list_$DATE
   done
   echo "" >> list_$DATE
+rm tmp$DATE
+echo iter$j done
 done
 
 #将最后一轮的数据单独列出
@@ -42,7 +48,7 @@ do
     echo -n ", \"list_$DATE\" u $i w lp ls 3" >> gnuplot_script_$DATE
   elif [ $i -eq $large2Pos ];then
     echo -n ", \"list_$DATE\" u $i w lp ls 4" >> gnuplot_script_$DATE
-  elif [ $i -eq $large3Pos ];then
+  elif [ $i = $large3Pos ];then
     echo -n ", \"list_$DATE\" u $i w lp ls 5" >> gnuplot_script_$DATE
   else
     echo -n ", \"list_$DATE\" u $i w lp ls 7" >> gnuplot_script_$DATE
