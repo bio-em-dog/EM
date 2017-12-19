@@ -15,7 +15,7 @@
 
 2017.11
 
-[x] 加入常见信息grep
+- [x] 加入常见信息grep
 
 
 ### autorelion.sh
@@ -37,7 +37,7 @@
 2017-12  
 每一个iter的总变化颗粒数
 
-[ ] 加入自动画图
+- [ ] 加入自动画图
 
 ### class_exchange_pot.sh
 
@@ -66,4 +66,4 @@
 2017-12
 
 /run/media/em/data3t-1/trf2/trf2-20171121-5p1/relion/Class2D/job004
-[x] 哪个class盒子的颗粒出入多 见class_exchange两个脚本
+- [x] 哪个class盒子的颗粒出入多 见class_exchange两个脚本
