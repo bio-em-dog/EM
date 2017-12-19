@@ -1,0 +1,51 @@
+Number_of_iteration=25
+Number_of_Classes=100
+output=pot_change.pdf
+#--------------------------
+
+column=`cat run_it000_data.star | grep  _rlnClassNumber | cut -d '#' -f 2`
+[ -e pot_change ]&&rm pot_change
+
+
+for ((j=1;j<=$Number_of_iteration;j++));do
+  filename=`ls *it0*${j}_data.star | tail -n 1`
+  awk -v a=$column {'print $a'} < $filename > tmp.aaa.$j
+
+  for ((i=1;i<=$Number_of_Classes;i++));do
+    grep -c $i tmp.aaa.$j
+  done > tmp.bbb.$j
+
+#  rm tmp.aaa.$j
+  echo "iter $j/$Number_of_iteration greped"
+done
+
+echo "Plotting......"
+
+
+for ((i=2;i<=$Number_of_iteration;i++));do
+  paste tmp.bbb.$(($i - 1)) tmp.bbb.$i | awk {'print $2-$1'} >> tmp.ccc.$i
+  
+  #换方向
+  for j in `cat tmp.ccc.$i`; do
+    echo -ne "$j\t" >> pot_change
+  done
+  echo "">> pot_change
+  
+done
+
+
+echo -e "set term pdf\nset output \"$output\"\nunset key" > gnuplot_script
+echo -n "plot " >> gnuplot_script
+
+for ((i=1;i<$Number_of_Classes;i++));do
+  echo -n "\"pot_change\" using $i with lp ls 7," >> gnuplot_script
+done
+
+echo "\"pot_change\" using $Number_of_Classes with lp ls 7" >> gnuplot_script
+echo "set output" >> gnuplot_script
+
+gnuplot gnuplot_script
+rm tmp.aaa.*
+rm tmp.bbb.*
+rm tmp.ccc.*
+echo "Done"
