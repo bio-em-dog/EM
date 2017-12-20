@@ -15,7 +15,7 @@ do
   awk -v a=$column {'print $a'} < $filename > tmp$DATE
   for ((i=1;i<=$Number_of_Classes;i++))
   do
-    ClassNumber=`grep -c $i tmp$DATE`
+    ClassNumber=`grep -c "^$i$" tmp$DATE`
     echo -n "$ClassNumber " >> list_$DATE
   done
   echo "" >> list_$DATE
