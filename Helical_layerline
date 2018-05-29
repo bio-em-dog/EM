@@ -1,0 +1,7 @@
+from EMAN2 import *
+import os,sys,math
+
+proc2d test.mrc hhh.mrc fftavg=hhh.mrc
+img=EMData('test.mrc')
+
+for i in range(1024,)
