@@ -12,3 +12,6 @@ while k == 0:
                                 print('mv /mnt/raidx/20180303-gyz/data/'+lst2[i].split('\n')[0]+' .')
                                 os.system('mv /mnt/raidx/20180303-gyz/data/'+lst2[i].split('\n')[0]+' .')
         time.sleep(5)
+
+
+#自动转移文件

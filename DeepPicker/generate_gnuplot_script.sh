@@ -1,3 +1,4 @@
+#将坐标画在一张图里
 echo "cd 'C:\Users\jia\Sync\demo_lp0.1\threshold_0.1'" > gnuplot_tmp
 echo "set term pdf" >> gnuplot_tmp
 echo "set output \"aaaa.pdf\"" >> gnuplot_tmp

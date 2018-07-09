@@ -1,3 +1,4 @@
+#自动寻找Helical layer line
 from EMAN2 import *
 import os,sys,math
 
