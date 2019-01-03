@@ -56,6 +56,10 @@
 ### runpar-4.py
 
 
+### DataTrans.py
+
+自动转移文件
+
 ### select_micrographs.py
 2017-06
 不熟练的时候的脚本;一个starfile，一个list是所有好的micrographs名称，只保留在list列micrographs面的颗粒。

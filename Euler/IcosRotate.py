@@ -1,5 +1,8 @@
+#rotate volume to 60 symm positon
+
 from numpy import *
 from math import *
+
 anglist=open('anglist','r').readlines()
 file2=open('micrographlst','r').readlines()
 x1=['']*len(anglist)
