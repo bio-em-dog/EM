@@ -67,3 +67,8 @@
 
 /run/media/em/data3t-1/trf2/trf2-20171121-5p1/relion/Class2D/job004
 - [x] 哪个class盒子的颗粒出入多 见class_exchange两个脚本
+
+### Split copy fft
+
+GUI的制作 PAGE  按钮-变量
+打包发布 Pyinstaller
