@@ -1,0 +1,92 @@
+1
+jalign omrv_half2.shrink-4.lst threed.0a.mrc orientation-center.1.239.lst --first=11950 --last=12000 --apix 4.36 --oversample 3 --batchsize 1 --aligner refineOrientationCenter2:flipphase=0:maskradius=54:masksoft=-3:rangerot=180:rangexy=3 --preprocess filter.ctf:type=1:oversample=3 --preprocess normalize.mask.circlemean:mask=0:radius=60 --projector fourierGriddingRSTM:npad=1 --cmp ccc  --verbose=1 --nolog  
+
+2
+jalign orientation-center.1.lst threed.1a.mrc orientation-center.2.378.lst --first=18900 --last=18909 --apix 4.36 --oversample 3 --batchsize 1 --aligner refineOrientationCenter2:flipphase=0:maskradius=54:masksoft=-3:rangerot=180:rangexy=3 --preprocess filter.ctf:type=1:oversample=3 --preprocess normalize.mask.circlemean:mask=0:radius=60 --projector fourierGriddingRSTM:npad=1 --cmp ccc  --verbose=1 --nolog  
+
+3
+jalign orientation-center.2.lst threed.2a.mrc orientation-center.3.378.lst --first=18900 --last=18909 --apix 4.36 --oversample 3 --batchsize 1 --aligner refineOrientationCenter2:flipphase=0:maskradius=54:masksoft=-3:rangerot=180:rangexy=3 --preprocess filter.ctf:type=1:oversample=3 --preprocess normalize.mask.circlemean:mask=0:radius=60 --projector fourierGriddingRSTM:npad=1 --cmp ccc  --verbose=1 --nolog  
+
+4
+jalign orientation-center.3.lst threed.3a.mrc orientation-center.4.378.lst --first=18900 --last=18909 --apix 4.36 --oversample 3 --batchsize 1 --aligner refineOrientationCenter2:flipphase=0:maskradius=54:masksoft=-3:rangerot=180:rangexy=3 --preprocess filter.ctf:type=1:oversample=3 --preprocess normalize.mask.circlemean:mask=0:radius=60 --projector fourierGriddingRSTM:npad=1 --cmp ccc  --verbose=1 --nolog  
+
+5
+jalign orientation-center.4.lst threed.4a.mrc orientation-center.5.378.lst --first=18900 --last=18909 --apix 4.36 --oversample 3 --batchsize 1 --aligner refineOrientationCenter2:flipphase=0:maskradius=54:masksoft=-3:rangerot=180:rangexy=3 --preprocess filter.ctf:type=1:oversample=3 --preprocess normalize.mask.circlemean:mask=0:radius=60 --projector fourierGriddingRSTM:npad=1 --cmp ccc  --verbose=1 --nolog  
+
+6
+
+7
+
+8
+
+9
+
+10
+
+11
+jalign orientation-center.10.lst threed.10a.mrc orientation-center.11.378.lst --first=18900 --last=18909 --apix 4.36 --oversample 3 --batchsize 1 --aligner refineOrientationCenter:flipphase=0:maskradius=54:masksoft=-3:steprot=1:stepxy=1 --preprocess filter.ctf:type=1:oversample=3 --preprocess normalize.mask.circlemean:mask=0:radius=60 --projector fourierGriddingRSTM:npad=1 --cmp ccc  --verbose=1 --nolog  
+
+12
+jalign orientation-center.11.lst threed.11a.mrc orientation-center.12.378.lst --first=18900 --last=18909 --apix 4.36 --oversample 3 --batchsize 1 --aligner refineOrientationCenter:flipphase=0:maskradius=54:masksoft=-3:steprot=1:stepxy=1 --preprocess filter.ctf:type=1:oversample=3 --preprocess normalize.mask.circlemean:mask=0:radius=60 --projector fourierGriddingRSTM:npad=1 --cmp ccc  --verbose=1 --nolog  
+
+13
+
+14
+
+15
+
+16
+
+17
+
+18
+
+19
+
+20
+
+21
+jalign orientation-center.20.lst threed.20a.mrc orientation-center.21.378.lst --first=18900 --last=18909 --apix 2.18 --oversample 3 --batchsize 1 --aligner refineOrientationCenter:flipphase=0:maskradius=110:masksoft=-3:steprot=1:stepxy=1 --preprocess filter.ctf:type=1:oversample=3 --preprocess normalize.mask.circlemean:mask=0:radius=120 --projector fourierGriddingRSTM:npad=1 --cmp ccc  --verbose=1 --nolog  
+
+22
+jalign orientation-center.21.lst threed.21a.mrc orientation-center.22.378.lst --first=18900 --last=18909 --apix 2.18 --oversample 3 --batchsize 1 --aligner refineOrientationCenter:flipphase=0:maskradius=110:masksoft=-3:steprot=1:stepxy=1 --preprocess filter.ctf:type=1:oversample=3 --preprocess normalize.mask.circlemean:mask=0:radius=120 --projector fourierGriddingRSTM:npad=1 --cmp ccc  --verbose=1 --nolog  
+
+23
+jalign orientation-center.22.lst threed.22a.mrc orientation-center.23.1208.lst --first=12046 --last=12047 --apix 2.18 --oversample 3 --batchsize -1 --aligner  refineMicrographDefocus:batchsize=-1:ctfonproj=0:defocusrange=0.2:discardMap=0:maskradius=110:masksoft=-3:precision=0.005:stepdefocus=0.02:useOrigDefocus=1 --aligner refineOrientationCenter:flipphase=1:maskradius=110:masksoft=-3:steprot=1:stepxy=1 --preprocess normalize.mask.circlemean:mask=0:radius=120 --projector fourierGriddingRSTM:npad=1 --cmp ccc  --verbose=1 --nolog  
+
+24
+jalign orientation-center.23.lst threed.23a.mrc orientation-center.24.1208.lst --first=12046 --last=12047 --apix 2.18 --oversample 3 --batchsize -1 --aligner  refineMicrographDefocus:batchsize=-1:ctfonproj=0:defocusrange=0.2:discardMap=0:maskradius=110:masksoft=-3:precision=0.005:stepdefocus=0.02:useOrigDefocus=1 --aligner refineOrientationCenter:flipphase=1:maskradius=110:masksoft=-3:steprot=1:stepxy=1 --preprocess normalize.mask.circlemean:mask=0:radius=120 --projector fourierGriddingRSTM:npad=1 --cmp ccc  --verbose=1 --nolog  
+
+25
+jalign orientation-center.24.lst threed.24a.mrc orientation-center.25.1208.lst --first=12046 --last=12047 --apix 2.18 --oversample 3 --batchsize -1 --aligner  refineMicrographDefocus:batchsize=-1:ctfonproj=0:defocusrange=0.2:discardMap=0:maskradius=110:masksoft=-3:precision=0.005:stepdefocus=0.02:useOrigDefocus=1 --aligner refineAstigmatism:batchsize=-1:ctfonproj=0:dfdiffrange=0.2:discardMap=0:maskradius=110:masksoft=-3:precision=0.005:stepdfdiff=0.02 --aligner refineOrientationCenter:flipphase=1:maskradius=110:masksoft=-3:steprot=1:stepxy=1 --preprocess normalize.mask.circlemean:mask=0:radius=120 --projector fourierGriddingRSTM:npad=1 --cmp ccc  --verbose=1 --nolog  
+
+26
+jalign orientation-center.25.lst threed.25a.mrc orientation-center.26.1208.lst --first=12046 --last=12047 --apix 2.18 --oversample 3 --batchsize -1 --aligner  refineMicrographDefocus:batchsize=-1:ctfonproj=0:defocusrange=0.2:discardMap=0:maskradius=110:masksoft=-3:precision=0.005:stepdefocus=0.02:useOrigDefocus=1 --aligner refineAstigmatism:batchsize=-1:ctfonproj=0:dfdiffrange=0.2:discardMap=0:maskradius=110:masksoft=-3:precision=0.005:stepdfdiff=0.02 --aligner refineOrientationCenter:flipphase=1:maskradius=110:masksoft=-3:steprot=1:stepxy=1 --preprocess normalize.mask.circlemean:mask=0:radius=120 --projector fourierGriddingRSTM:npad=1 --cmp ccc  --verbose=1 --nolog  
+
+27
+jalign orientation-center.26.lst threed.26a.mrc orientation-center.27.1208.lst --first=12046 --last=12047 --apix 2.18 --oversample 3 --batchsize -1 --aligner refineScale:batchsize=-1:ctfonproj=0:flipphase=1:maskradius=110:masksoft=-3:precision=0.002:scalerange=0.02:stepscale=0.002 --aligner refineOrientationCenter:flipphase=1:maskradius=110:masksoft=-3:steprot=1:stepxy=1 --preprocess normalize.mask.circlemean:mask=0:radius=120 --projector fourierGriddingRSTM:npad=1 --cmp ccc  --verbose=1 --nolog  
+
+28
+
+29
+
+30
+
+31
+jalign orientation-center.30.lst threed.30a.mrc orientation-center.31.1890.lst --first=18900 --last=18909 --apix 1.09 --oversample 0 --batchsize 1 --aligner refineOrientationCenter:flipphase=0:maskradius=220:masksoft=-5:steprot=1:stepxy=1 --preprocess filter.ctf:type=1:oversample=0 --preprocess filter.ctf:type=8:oversample=0 --preprocess normalize.mask.circlemean:mask=0:radius=240:usescale=1 --projector fourierGriddingRSTM:npad=1 --cmp ccc  --verbose=1 --nolog  
+
+32
+jalign orientation-center.31.lst threed.31a.mrc orientation-center.32.1890.lst --first=18900 --last=18909 --apix 1.09 --oversample 0 --batchsize 1 --aligner refineOrientationCenter:flipphase=0:maskradius=220:masksoft=-5:steprot=1:stepxy=1 --preprocess filter.ctf:type=1:oversample=0 --preprocess filter.ctf:type=8:oversample=0 --preprocess normalize.mask.circlemean:mask=0:radius=240:usescale=1 --projector fourierGriddingRSTM:npad=1 --cmp ccc  --verbose=1 --nolog  
+
+33
+jalign orientation-center.32.lst threed.32a.mrc orientation-center.33.3781.lst --first=18905 --last=18909 --apix 1.09 --oversample 0 --batchsize 1 --aligner refineOrientationCenter:flipphase=0:maskradius=220:masksoft=-5:steprot=1:stepxy=1 --preprocess filter.ctf:type=1:oversample=0 --preprocess filter.ctf:type=8:oversample=0 --preprocess normalize.mask.circlemean:mask=0:radius=240:usescale=1 --projector fourierGriddingRSTM:npad=1 --cmp phaseResRange:lowRes=150:lowRes2=5:highRes=5:ampweight=0:ctfampweight=1:mode=0:bfactor=0:weightFile=fsc.32.txt.fit  --verbose=1 --nolog  
+
+34
+jalign orientation-center.33.lst threed.33a.mrc orientation-center.34.2523.lst --first=12046 --last=12047 --apix 1.09 --oversample 0 --batchsize 1  --aligner  refineMicrographDefocus:batchsize=1:ctfonproj=0:defocusrange=0.2:discardMap=0:maskradius=220:masksoft=-5:precision=0.005:stepdefocus=0.02:useOrigDefocus=1 --aligner refineOrientationCenter:flipphase=1:maskradius=220:masksoft=-5:steprot=1:stepxy=1 --preprocess normalize.mask.circlemean:mask=0:radius=240:usescale=1 --projector fourierGriddingRSTM:npad=1 --cmp phaseResRange:lowRes=150:lowRes2=3:highRes=3:ampweight=0:ctfampweight=1:mode=0:bfactor=0:weightFile=fsc.33.txt.fit  --verbose=1 --nolog  
+
+35
+jalign orientation-center.34.lst threed.34a.mrc orientation-center.35.2523.lst --first=12046 --last=12047 --apix 1.09 --oversample 0 --batchsize 1  --aligner refineAstigmatism:batchsize=-1:ctfonproj=0:dfdiffrange=0.1:discardMap=0:maskradius=220:masksoft=-5:precision=0.001:stepdfdiff=0.02 --aligner  refineMicrographDefocus:batchsize=1:ctfonproj=0:defocusrange=0.05:discardMap=0:maskradius=220:masksoft=-5:precision=0.001:stepdefocus=0.02:useOrigDefocus=1 --aligner refineOrientationCenter:flipphase=1:maskradius=220:masksoft=-5:steprot=1:stepxy=1 --preprocess normalize.mask.circlemean:mask=0:radius=240:usescale=1 --projector fourierGriddingRSTM:npad=1 --cmp phaseResRange:lowRes=150:lowRes2=3:highRes=3:ampweight=0:ctfampweight=1:mode=0:bfactor=0:weightFile=fsc.34.txt.fit  --verbose=1 --nolog  
+
+36
+jalign orientation-center.35.lst threed.35a.mrc orientation-center.36.2523.lst --first=12046 --last=12047 --apix 1.09 --oversample 0 --batchsize -1 --aligner refineScale:batchsize=1:ctfonproj=0:flipphase=1:maskradius=220:masksoft=-5:precision=0.001:scalerange=0.02:stepscale=0.004 --aligner refineAstigmatism:batchsize=1:ctfonproj=0:dfdiffrange=0.05:discardMap=0:maskradius=220:masksoft=-5:precision=0.001:stepdfdiff=0.01 --aligner  refineMicrographDefocus:batchsize=1:ctfonproj=0:defocusrange=0.05:discardMap=0:maskradius=220:masksoft=-5:precision=0.001:stepdefocus=0.01:useOrigDefocus=0 --aligner refineOrientationCenter:flipphase=1:maskradius=220:masksoft=-5:steprot=0.5:stepxy=0.5 --preprocess normalize.mask.circlemean:mask=0:radius=240:usescale=1 --projector fourierGriddingRSTM:npad=1 --cmp phaseResRange:lowRes=150:lowRes2=3:highRes=3:ampweight=0:ctfampweight=1:mode=0:bfactor=0:weightFile=fsc.35.txt.fit  --verbose=1 --nolog  
+
