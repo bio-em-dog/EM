@@ -7,10 +7,23 @@ Number_of_Classes=100
 #注意cut的位置！！！
 #cut位置由grep和awk共同定位，不用手动了
 #------------------------------------------------------
-column=`cat run_it000_data.star | grep  _rlnClassNumber | cut -d '#' -f 2`
 
-for j in {01..25}
+if [[ $1 = "" || $2 = "" ]]; then
+echo "usage: bash ClassNumber.sh <number of classes> <iter>"
+exit 0
+fi
+
+classes=$1
+for (j=1,j<$iter;j++)
 do
+
+  if [[ $2 -lt 10 ]];then
+  iter=0$2
+  else
+  iter=$2
+  fi
+  column=`grep "_rlnClassNumber" run_it000_data.star | cut -d '#' -f 2`
+
   filename=`ls *it0${j}_data.star | tail -n 1`
   awk -v a=$column {'print $a'} < $filename > tmp$DATE
   for ((i=1;i<=$Number_of_Classes;i++))
