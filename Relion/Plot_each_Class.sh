@@ -9,7 +9,7 @@ Number_of_Classes=100
 #------------------------------------------------------
 
 if [[ $1 = "" || $2 = "" ]]; then
-echo "usage: bash ClassNumber.sh <number of classes> <iter>"
+echo "usage: ClassNumber.sh <number of classes> <iter>"
 exit 0
 fi
 
