@@ -2,14 +2,14 @@
 #------------------------------------------------------
 DATE=$(date +%Y%m%d%H%M%S)
 
-Number_of_iteration=25
-Number_of_Classes=100
+#Number_of_iteration=25
+#Number_of_Classes=100
 #注意cut的位置！！！
 #cut位置由grep和awk共同定位，不用手动了
 #------------------------------------------------------
 
 if [[ $1 = "" || $2 = "" ]]; then
-echo "usage: ClassNumber.sh <number of classes> <iter>"
+echo "usage: Plot_each_Class.sh <number of classes> <iter>"
 exit 0
 fi
 
@@ -37,10 +37,10 @@ echo iter$j done
 done
 
 #将最后一轮的数据单独列出
-for i in `tail -n 1 list_$DATE`
-do
-  echo $i
-done > ClassNumber025
+#for i in `tail -n 1 list_$DATE`
+#do
+#  echo $i
+#done > ClassNumber025
 
 large1=`sort -r -n ClassNumber025 | head -n 1 | tail -n 1`
 large1Pos=`grep -n $large1 ClassNumber025 | cut -d ':' -f 1`
@@ -50,7 +50,7 @@ large3=`sort -r -n ClassNumber025 | head -n 3 | tail -n 1`
 large3Pos=`grep -n $large3 ClassNumber025 | cut -d ':' -f 1`
 
 #生成gnuplot的命令
-echo -e "set term pdf\nset output \"aaaa_$DATE.pdf\"\nunset key" > gnuplot_script_$DATE
+echo -e "set term pdf\nset output \"zPlot_$DATE.pdf\"\nunset key" > gnuplot_script_$DATE
 echo "set label 1 \"$large1\" at $Number_of_iteration,$large1 center" >> gnuplot_script_$DATE
 echo "set label 2 \"$large2\" at $Number_of_iteration,$large2 center" >> gnuplot_script_$DATE
 echo "set label 3 \"$large3\" at $Number_of_iteration,$large3 center" >> gnuplot_script_$DATE
