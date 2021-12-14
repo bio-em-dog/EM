@@ -38,7 +38,7 @@ def main():
 	PI=3.14159265359
 	DROPPED_SUBPARTICLE=0
 	mline=judge_mline0(inlst_line)
-	print "mline="+str(mline)
+	print ("mline="+str(mline))
 	for i in range(0,mline):
 		r.write(str(inlst_line[i]))
 	LAST_METADATA_NUM=int(inlst_line[mline-1].split()[1].split('#')[1])
@@ -239,7 +239,7 @@ def parse_command_line():
 	parser = OptionParser(usage=usage, version="%1")
 	
 	if len(sys.argv)<11: 
-		print "<input star> <point x> <point y> <point z> <whole particle boxsize> <output> <DEBUG, plus=1, minus=0, nochange=2> <micrograph nx> <micrograph ny> <Symmetry>\nSupported symmetry is Cn, Dn and I3"
+		print ("<input star> <point x> <point y> <point z> <whole particle boxsize> <output> <DEBUG, plus=1, minus=0, nochange=2> <micrograph nx> <micrograph ny> <Symmetry>\nSupported symmetry is Cn, Dn and I3")
 		sys.exit(-1)
 	
 	(options, args)=parser.parse_args()

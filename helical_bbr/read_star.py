@@ -22,7 +22,7 @@ def get_metadata(inputstar):  # 剥离metadata部分, 获得每个label的列数
         line=inputstar[i]
         metadata.append(line)
         if "_rln" in line:
-            endl=i
+            end=i
         
         if "_rlnImageName" in line:
             COL_img = int(line.split("#")[1])
