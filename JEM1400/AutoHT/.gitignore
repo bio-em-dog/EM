@@ -1,0 +1,4 @@
+*.exe
+pyinstaller/*
+!pyinstaller/Pipfile
+__pycache__
