@@ -52,7 +52,7 @@ def euler_angle2matrix(rot,tilt,psi):
     return(array)
 
 def euler_matrix2angle(array):
-    a1 = 
+    #a1 = 
     a2 = np.arccos(array[2,2])
 
 def get_metadata(inputstar):  # 剥离metadata部分, 获得每个label的列数
