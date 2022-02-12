@@ -17,7 +17,6 @@ pyinstaller
 
 
 
-
 ## pipenv
 https://zhuanlan.zhihu.com/p/57674343
 
@@ -56,7 +55,7 @@ pyinstaller -D -i "..\icon\dec.ico" "..\dec.py"
 pyinstaller -D -i "..\icon\inc.ico" "..\inc.py"
 ```
 
--D 单文件夹
+-D 文件夹
 -F 单文件
 -w 隐藏consel
 --icon
