@@ -1,6 +1,27 @@
 V2.0：直接操作tiff文件，不借助第三方tiff库，保留完整的tag信息
 
-LZW?
+LZW
+
+## libtiff下载编译安装
+[libtiff官网](http://www.libtiff.org/)
+[下载4.0.10]http://download.osgeo.org/libtiff/
+编译相关网友帖子[1](https://blog.csdn.net/weixin_44886683/article/details/119188230)[2](https://www.cnblogs.com/flylong0204/articles/4955201.html) [3](https://blog.csdn.net/nwpulei/article/details/7473669) [4](https://blog.csdn.net/u013921430/article/details/79758906)
+安装visual studio
+找到visual studio的`vcvars32.bat`
+进入下载的tifflib文件夹，`CMD`
+```cmd
+path\vcvars32.bat
+nmake /f makefile.vc
+```
+visual studio中[导入库文件的方法](https://blog.csdn.net/qq_38418314/article/details/111504663)，前面的[4](https://blog.csdn.net/u013921430/article/details/79758906)中也有，实际上是添加一个PATH
+
+## 参考 修改splittiff
+
+
+
+
+
+
 
 ## EMSIS Tiff Sturcture
 

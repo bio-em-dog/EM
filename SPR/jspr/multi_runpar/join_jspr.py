@@ -24,21 +24,30 @@ def stop():
 
 def watch(host, iteration):
     with open(host+"_"+str(iteration)+"_runp",'r') as f:
-        runp=[i.split()[3] for i in f.readlines()]
+        if f.readlines()==[]:
+            stop()
+        else:
+            runp=[i.split()[3] for i in f.readlines()]
     total_command=len(runp)+0.1-0.1
+    wait=240
     while 1:
         if os.path.exists(host+"_"+str(iteration)+"_runp"):
-            donelst = [i.strip() for i in os.popen("ls orientation-center."+str(iteration)+".*.lst").readlines() if i.strip() in runp]
-            print("%.2f %% done"%(len(donelst)/total_command*100))
+            wait+=1
+            if wait >= 240: # 3*240=720s=12min
+                donelst = [i.strip() for i in os.popen("ls orientation-center."+str(iteration)+".*.lst").readlines() if i.strip() in runp]
+                print("%.2f %% done"%(len(donelst)/total_command*100))
+                wait=0
+                if len(donelst) == total_command:
+                    break
         elif not os.path.exists(host+"_"+str(iteration)+"_runp"):
             stop()
             print("Exit by delet runpar file")
-            return(0)
+            break
         elif os.path.exists("orientation-center."+str(i)+".lst"):
             stop()
             print("Exit, over run")
-            return(0)
-        time.sleep(120)
+            break
+        time.sleep(3)
 
 
 def genRunparFile(host, iteration):
